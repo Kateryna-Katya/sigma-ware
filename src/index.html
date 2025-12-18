@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigma-Ware | IT-Школа нового поколения</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
-  </head>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F172A'/><path d='M30 70 L50 30 L70 70' stroke='%2300F0FF' stroke-width='8' fill='none' stroke-linejoin='round'/></svg>">
+</head>
+
   <body>
     <load src="./partials/header.html" />
 
@@ -16,6 +28,43 @@
     </main>
 
     <load src="./partials/footer.html" />
+<div class="modal" id="marketingModal">
+  <div class="modal__overlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" id="closeModal">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="modal__body">
+      <span class="section-tag">Спецпредложение</span>
+      <h2 class="modal__title">Получите дорожную карту IT-профессий 2026</h2>
+      <p class="modal__text">Мы подготовили подробный гайд по самым востребованным технологиям во Франции и ЕС. Оставьте
+        email, и мы вышлем его бесплатно.</p>
+
+      <form class="form" id="modalForm">
+        <input type="email" class="form__input" placeholder="Ваш email" required>
+        <button type="submit" class="btn btn--primary btn--full">Получить гайд</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="cookie-bar" id="cookieConsent">
+  <div class="cookie-bar__content">
+    <div class="cookie-bar__icon">
+      <i data-lucide="cookie"></i>
+    </div>
+    <div class="cookie-bar__text">
+      <h4>Мы ценим вашу приватность</h4>
+      <p>
+        Sigma-Ware использует файлы cookie для анализа трафика и улучшения вашего опыта.
+        Оставаясь на сайте, вы соглашаетесь с нашей <a href="./cookies.html">Cookie политикой</a>.
+      </p>
+    </div>
+    <div class="cookie-bar__actions">
+      <button class="btn btn--primary btn--sm" id="cookieAccept">Принять все</button>
+      <button class="btn btn--outline btn--sm" id="cookieDecline">Отклонить</button>
+    </div>
+  </div>
+</div>
 
     <script type="module" src="./main.js"></script>
   </body>
