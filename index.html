@@ -1,56 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/sigma-ware/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/sigma-ware/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/sigma-ware/assets/styles-guStct1H.css">
-  </head>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigma-Ware | IT-Школа нового поколения</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F172A'/><path d='M30 70 L50 30 L70 70' stroke='%2300F0FF' stroke-width='8' fill='none' stroke-linejoin='round'/></svg>">
+  <script type="module" crossorigin src="/sigma-ware/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/sigma-ware/assets/styles-CzlSELOC.css">
+</head>
+
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="container header__container">
+    <a href="./#home" class="header__logo">
+      <span class="header__logo-icon"></span>
+      <span class="header__logo-text">Sigma-Ware</span>
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu-item"><a href="./#home" class="header__menu-link">Главная</a></li>
+        <li class="header__menu-item"><a href="./#courses" class="header__menu-link">Обучение</a></li>
+        <li class="header__menu-item"><a href="./#benefits" class="header__menu-link">Преимущества</a></li>
+        <li class="header__menu-item"><a href="./#innovation" class="header__menu-link">Инновации</a></li>
+        <li class="header__menu-item"><a href="./#blog" class="header__menu-link">Блог</a></li>
+        <li class="header__menu-item"><a href="./#faq" class="header__menu-link">FAQ</a></li>
       </ul>
     </nav>
+
+    <a href="./#contact" class="btn btn--primary header__cta">Связаться</a>
+
+    <button class="header__burger" aria-label="Menu">
+      <span></span>
+    </button>
   </div>
 </header>
-
+<div class="mobile-menu">
+  <nav class="mobile-menu__nav">
+    <a href="./#home" class="mobile-menu__link">Главная</a>
+    <a href="./#courses" class="mobile-menu__link">Обучение</a>
+    <a href="./#benefits" class="mobile-menu__link">Преимущества</a>
+    <a href="./#innovation" class="mobile-menu__link">Инновации</a>
+    <a href="./#blog" class="mobile-menu__link">Блог</a>
+    <a href="./#faq" class="mobile-menu__link">FAQ</a>
+    <a href="./#contact" class="btn btn--primary">Начать сейчас</a>
+  </nav>
+</div>
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="home">
+    <div class="container">
+        <h1 class="hero__title">Технологии нового поколения для вашего успеха</h1>
+        <p class="hero__subtitle">Постройте карьеру, которая работает на вас. AI-инструменты для реальных задач и
+            экспертная поддержка на всех этапах.</p>
+        <div class="hero__btns">
+            <a href="#contact" class="btn btn--primary">Запросить доступ</a>
+            <a href="#courses" class="btn btn--outline">Узнать детали</a>
+        </div>
+    </div>
+    <div class="hero__decoration"></div>
+</section>
+
+<section class="section" id="courses">
+    <div class="container">
+        <span class="section-tag">Программы обучения</span>
+        <h2 class="section-title">Переосмыслите подход к развитию</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <h3>Data Science & AI</h3>
+                <p>Инновационная технология анализа данных и внедрение нейросетей.</p>
+                <span class="course-card__link">Подробнее <i data-lucide="arrow-up-right"></i></span>
+            </div>
+            <div class="course-card">
+                <h3>Fullstack Dev</h3>
+                <p>Передовая цифровая инфраструктура: от фронтенда до сложных баз данных.</p>
+                <span class="course-card__link">Подробнее <i data-lucide="arrow-up-right"></i></span>
+            </div>
+            <div class="course-card">
+                <h3>Cyber Security</h3>
+                <p>Решения, которые меняют правила игры в области цифровой безопасности.</p>
+                <span class="course-card__link">Подробнее <i data-lucide="arrow-up-right"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--alt" id="benefits">
+    <div class="container benefits-layout">
+        <div class="benefits-text">
+            <span class="section-tag">Преимущества</span>
+            <h2 class="section-title">Почему Sigma-Ware?</h2>
+            <p>Мы создали платформу, где теория встречается с практикой, применимой уже сегодня.</p>
+        </div>
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <div class="benefit-icon"><i data-lucide="zap"></i></div>
+                <h4>Быстрый и легкий старт</h4>
+                <p>Подключение занимает 2 минуты. Пошаговый путь, понятный каждому.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon"><i data-lucide="shield-check"></i></div>
+                <h4>Проверенный партнер</h4>
+                <p>Методологии, доказавшие эффективность в странах ЕС.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="innovation">
+    <div class="container">
+        <div class="innovation-box">
+            <h2 class="section-title">Инновации, которые работают на вас</h2>
+            <p>Наша платформа года использует AI-инструменты для автоматизации обучения.</p>
+            <div class="innovation-stats">
+                <div class="stat"><span>98%</span>
+                    <p>Успешных кейсов</p>
+                </div>
+                <div class="stat"><span>24/7</span>
+                    <p>Поддержка</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="blog">
+    <div class="container">
+        <h2 class="section-title">Блог и аналитика</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-card__img"><img src="img/placeholder.png" alt="blog"></div>
+                <div class="blog-card__content">
+                    <span>Технологии</span>
+                    <h4>Стратегия роста на базе инноваций</h4>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-card__img"><img src="img/placeholder.png" alt="blog"></div>
+                <div class="blog-card__content">
+                    <span>Карьера</span>
+                    <h4>Воплотите мечты в реальность</h4>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section--alt" id="faq">
+    <div class="container">
+        <h2 class="section-title">Часто задаваемые вопросы</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Как начать обучение? <i data-lucide="chevron-down"></i></div>
+                <div class="faq-answer">Легко разобраться без опыта. Просто оставьте заявку, и мы вышлем доступ к
+                    платформе.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Доступно ли это во Франции? <i data-lucide="chevron-down"></i></div>
+                <div class="faq-answer">Да, платформа уже доступна в Европе. Все контакты и поддержка локализованы.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info">
+                <span class="section-tag">Связаться с нами</span>
+                <h2 class="section-title">Готовы начать путь в IT?</h2>
+                <p>Оставьте заявку, и наш эксперт проведет для вас бесплатную консультацию по всем вопросам развития в
+                    индустрии.</p>
+                <div class="contact__details">
+                    <div class="contact__item">
+                        <i data-lucide="phone"></i>
+                        <span>+33 1 53 43 45 00</span>
+                    </div>
+                    <div class="contact__item">
+                        <i data-lucide="mail"></i>
+                        <span>hello@sigma-ware.org</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__form-wrapper">
+                <form class="form" id="contactForm">
+                    <div class="form__group">
+                        <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" name="email" class="form__input" placeholder="Email" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" name="phone" class="form__input" id="phoneInput"
+                            placeholder="Телефон (только цифры)" required>
+                    </div>
+
+                    <div class="form__captcha">
+                        <span id="captchaQuestion">7 + 5 = </span>
+                        <input type="text" id="captchaInput" class="form__input form__input--sm" placeholder="?"
+                            required>
+                    </div>
+
+                    <div class="form__checkbox">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">Согласен с политикой обработки персональных данных</label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">Начать сейчас</button>
+                </form>
+
+                <div class="form-success" id="successMessage" style="display: none;">
+                    <i data-lucide="check-circle" size="48"></i>
+                    <h3>Заявка принята!</h3>
+                    <p>Мы свяжемся с вами в течение 15 минут.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__container">
+    <div class="footer__column">
+      <a href="./#home" class="footer__logo">Sigma-Ware</a>
+      <p class="footer__description">Технологии, которые работают на вас. Постройте карьеру, которая меняет правила
+        игры.</p>
+    </div>
+
+    <div class="footer__column">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__list">
+        <li><a href="./#courses" class="footer__link">Курсы</a></li>
+        <li><a href="./#benefits" class="footer__link">Преимущества</a></li>
+        <li><a href="./#innovation" class="footer__link">Технологии</a></li>
+        <li><a href="./#blog" class="footer__link">Статьи</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <h4 class="footer__title">Документы</h4>
+      <ul class="footer__list">
+<li><a href="./privacy.html" class="footer__link">Политика конфиденциальности</a></li>
+<li><a href="./cookies.html" class="footer__link">Политика использования файлов cookie</a></li>
+<li><a href="./terms.html" class="footer__link">Условия использования</a></li>
+<li><a href="./return.html" class="footer__link">Политика возврата</a></li>
+<li><a href="./disclaimer.html" class="footer__link">Отказ от ответственности</a></li>
+<li><a href="./personal-data-policy.html" class="footer__link">Политика обработки персональных данных</a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <h4 class="footer__title">Контакты (France)</h4>
+      <ul class="footer__list footer__list--contacts">
+        <li><i data-lucide="map-pin"></i> 24 Rue du Faubourg Saint-Honoré, 75008 Paris</li>
+        <li><i data-lucide="phone"></i> +33 1 53 43 45 00</li>
+        <li><i data-lucide="mail"></i> hello@sigma-ware.org</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom container">
+    <p>&copy; 2025 Sigma-Ware. Все права защищены. Предложение активно только в странах ЕС.</p>
   </div>
 </footer>
+<div class="modal" id="marketingModal">
+  <div class="modal__overlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" id="closeModal">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="modal__body">
+      <span class="section-tag">Спецпредложение</span>
+      <h2 class="modal__title">Получите дорожную карту IT-профессий 2026</h2>
+      <p class="modal__text">Мы подготовили подробный гайд по самым востребованным технологиям во Франции и ЕС. Оставьте
+        email, и мы вышлем его бесплатно.</p>
 
+      <form class="form" id="modalForm">
+        <input type="email" class="form__input" placeholder="Ваш email" required>
+        <button type="submit" class="btn btn--primary btn--full">Получить гайд</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="cookie-bar" id="cookieConsent">
+  <div class="cookie-bar__content">
+    <div class="cookie-bar__icon">
+      <i data-lucide="cookie"></i>
+    </div>
+    <div class="cookie-bar__text">
+      <h4>Мы ценим вашу приватность</h4>
+      <p>
+        Sigma-Ware использует файлы cookie для анализа трафика и улучшения вашего опыта.
+        Оставаясь на сайте, вы соглашаетесь с нашей <a href="./cookies.html">Cookie политикой</a>.
+      </p>
+    </div>
+    <div class="cookie-bar__actions">
+      <button class="btn btn--primary btn--sm" id="cookieAccept">Принять все</button>
+      <button class="btn btn--outline btn--sm" id="cookieDecline">Отклонить</button>
+    </div>
+  </div>
+</div>
 
   </body>
 </html>
